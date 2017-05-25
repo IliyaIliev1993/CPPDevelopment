@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Auto>
+    <Car>
+        <Make>Audi</Make>
+        <Year>2010</Year>
+        <Price>35.500</Price>
+    </Car>
+    <Car>
+        <Make>BMW</Make>
+        <Year>2011</Year>
+        <Price>37.232</Price>
+    </Car>
+    <Car>
+        <Make>Mercedes</Make>
+        <Year>2015</Year>
+        <Price>102.500</Price>
+    </Car>
+</Auto>
