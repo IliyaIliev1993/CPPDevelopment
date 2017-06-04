@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Farmacy>
+    <Medicine>
+        <Name>Aspirine</Name>
+        <Price>17.50</Price>
+        <Quantity>20</Quantity>
+        <Type>Normal</Type>
+    </Medicine>
+    <Medicine>
+        <Name>Antibiotik</Name>
+        <Price>18.50</Price>
+        <Quantity>25</Quantity>
+        <Type>Normal</Type>
+    </Medicine>
+    <Medicine>
+        <Name>Revotril</Name>
+        <Price>2.50</Price>
+        <Quantity>30</Quantity>
+        <Type>Green</Type>
+    </Medicine>
+</Farmacy>
