@@ -23,15 +23,13 @@ class Operations
 {
 private:
     
-    //vector<FarmacyClass>vectorFarmacy1;
+    vector<FarmacyClass>vectorFarmacy1;
     
     vector<FarmacyClass>vectorFarmacy2;
     
     vector<FarmacyClass>vectorFarmacy3;
     
 public:
-    
-    vector<FarmacyClass>vectorFarmacy1;
     
     Operations();
     
