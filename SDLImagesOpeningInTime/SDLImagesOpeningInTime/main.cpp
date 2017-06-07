@@ -22,6 +22,8 @@ vector<SDL_Surface*>myVector;
 
 SDL_Window *windowPtr = NULL;
 
+SDL_Renderer *rendererPtr = NULL;
+
 SDL_Surface *surfacePtr = NULL;
 
 SDL_Surface *png1 = NULL;
