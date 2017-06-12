@@ -316,31 +316,31 @@ int main(int argc, const char * argv[]) {
             
             SDL_BlitSurface(backgroundImage,NULL,backGroundInWindow,NULL);
             
-            SDL_UpdateWindowSurface(windowPtr);
+            //SDL_UpdateWindowSurface(windowPtr);
             
             SDL_BlitSurface(cardLeft,NULL,backGroundInWindow,&rectCardLeft);
             
-            SDL_UpdateWindowSurface(windowPtr);
+            //SDL_UpdateWindowSurface(windowPtr);
             
             SDL_BlitSurface(cardRight,NULL,backGroundInWindow,&rectCardRight);
             
-            SDL_UpdateWindowSurface(windowPtr);
+            //SDL_UpdateWindowSurface(windowPtr);
             
             SDL_BlitSurface(playButton,NULL,backGroundInWindow,&rectButtonPlay);
             
-            SDL_UpdateWindowSurface(windowPtr);
+           // SDL_UpdateWindowSurface(windowPtr);
             
             SDL_BlitSurface(textMessage,NULL,backGroundInWindow,&rectText);
             
-            SDL_UpdateWindowSurface(windowPtr);
+            //SDL_UpdateWindowSurface(windowPtr);
             
             SDL_BlitSurface(textScore,NULL,backGroundInWindow,&rectScore);
             
-            SDL_UpdateWindowSurface(windowPtr);
+            //SDL_UpdateWindowSurface(windowPtr);
             
             SDL_BlitSurface(counterRightSurface,NULL,backGroundInWindow,&scoreRight);
             
-            SDL_UpdateWindowSurface(windowPtr);
+            //SDL_UpdateWindowSurface(windowPtr);
             
             SDL_BlitSurface(counterLeftSurface,NULL,backGroundInWindow,&scoreLeft);
             
@@ -366,31 +366,31 @@ int main(int argc, const char * argv[]) {
                     
                     SDL_BlitSurface(backgroundImage,NULL,backGroundInWindow,NULL);
                     
-                    SDL_UpdateWindowSurface(windowPtr);
+                    //SDL_UpdateWindowSurface(windowPtr);
                     
                     SDL_BlitSurface(cardLeft,NULL,backGroundInWindow,&rectCardLeft);
                     
-                    SDL_UpdateWindowSurface(windowPtr);
+                    //SDL_UpdateWindowSurface(windowPtr);
                     
                     SDL_BlitSurface(cardRight,NULL,backGroundInWindow,&rectCardRight);
                     
-                    SDL_UpdateWindowSurface(windowPtr);
+                    //SDL_UpdateWindowSurface(windowPtr);
                     
                     SDL_BlitSurface(playButtonRounded,NULL,backGroundInWindow,&rectButtonPlay);
                     
-                    SDL_UpdateWindowSurface(windowPtr);
+                    //SDL_UpdateWindowSurface(windowPtr);
                     
                     SDL_BlitSurface(textMessage,NULL,backGroundInWindow,&rectText);
                     
-                    SDL_UpdateWindowSurface(windowPtr);
+                    //SDL_UpdateWindowSurface(windowPtr);
                     
                     SDL_BlitSurface(textScore,NULL,backGroundInWindow,&rectScore);
                     
-                    SDL_UpdateWindowSurface(windowPtr);
+                    //SDL_UpdateWindowSurface(windowPtr);
                     
                     SDL_BlitSurface(counterRightSurface,NULL,backGroundInWindow,&scoreRight);
                     
-                    SDL_UpdateWindowSurface(windowPtr);
+                    //SDL_UpdateWindowSurface(windowPtr);
                     
                     SDL_BlitSurface(counterLeftSurface,NULL,backGroundInWindow,&scoreLeft);
                     
@@ -433,31 +433,31 @@ int main(int argc, const char * argv[]) {
                     
                     SDL_BlitSurface(backgroundImage,NULL,backGroundInWindow,NULL);
                     
-                    SDL_UpdateWindowSurface(windowPtr);
+                    //SDL_UpdateWindowSurface(windowPtr);
                     
                     SDL_BlitSurface(cardLeft,NULL,backGroundInWindow,&rectCardLeft);
                     
-                    SDL_UpdateWindowSurface(windowPtr);
+                    //SDL_UpdateWindowSurface(windowPtr);
                     
                     SDL_BlitSurface(cardRight,NULL,backGroundInWindow,&rectCardRight);
                     
-                    SDL_UpdateWindowSurface(windowPtr);
+                    //SDL_UpdateWindowSurface(windowPtr);
                     
                     SDL_BlitSurface(playButton,NULL,backGroundInWindow,&rectButtonPlay);
                     
-                    SDL_UpdateWindowSurface(windowPtr);
+                    //SDL_UpdateWindowSurface(windowPtr);
                     
                     SDL_BlitSurface(textMessage,NULL,backGroundInWindow,&rectText);
                     
-                    SDL_UpdateWindowSurface(windowPtr);
+                    //SDL_UpdateWindowSurface(windowPtr);
                     
                     SDL_BlitSurface(textScore,NULL,backGroundInWindow,&rectScore);
                     
-                    SDL_UpdateWindowSurface(windowPtr);
+                    //SDL_UpdateWindowSurface(windowPtr);
                     
                     SDL_BlitSurface(counterRightSurface,NULL,backGroundInWindow,&scoreRight);
                     
-                    SDL_UpdateWindowSurface(windowPtr);
+                    //SDL_UpdateWindowSurface(windowPtr);
                     
                     SDL_BlitSurface(counterLeftSurface,NULL,backGroundInWindow,&scoreLeft);
                     
