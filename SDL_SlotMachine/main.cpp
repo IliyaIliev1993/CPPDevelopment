@@ -36,7 +36,11 @@ SDL_Texture *textureCardMiddle = NULL;
 
 SDL_Texture *textureCardLeft = NULL;
 
-SDL_Texture *texturePNGRandom = NULL;
+SDL_Texture *texturePNGRandomRight = NULL;
+
+SDL_Texture *texturePNGRandomMiddle = NULL;
+
+SDL_Texture *texturePNGRandomLeft = NULL;
 
 const int w = 1280;
 
@@ -101,21 +105,21 @@ void loadTexture()
         cerr << "Problem to load BUTTON PUSHED" << endl;
     }
     
-    textureCardRight = IMG_LoadTexture(rendererPtr, "apple.png");
+    textureCardRight = IMG_LoadTexture(rendererPtr, "default.png");
     
     if(textureCardRight == NULL)
     {
         cerr << "Problem to load CARD RIGHT" << endl;
     }
     
-    textureCardMiddle = IMG_LoadTexture(rendererPtr, "apple.png");
+    textureCardMiddle = IMG_LoadTexture(rendererPtr, "default.png");
     
     if(textureCardMiddle == NULL)
     {
         cerr << "Problem to load CARD MIDDLE" << endl;
     }
     
-    textureCardLeft = IMG_LoadTexture(rendererPtr, "apple.png");
+    textureCardLeft = IMG_LoadTexture(rendererPtr, "default.png");
     
     if(textureCardLeft == NULL)
     {
@@ -141,6 +145,12 @@ void closeProgram()
     
     SDL_DestroyTexture(textureCardLeft);
     
+    SDL_DestroyTexture(texturePNGRandomRight);
+    
+    SDL_DestroyTexture(texturePNGRandomMiddle);
+    
+    SDL_DestroyTexture(texturePNGRandomLeft);
+    
     textureBackground = NULL;
     
     textureSlot = NULL;
@@ -154,6 +164,12 @@ void closeProgram()
     textureCardMiddle = NULL;
     
     textureCardLeft = NULL;
+    
+    texturePNGRandomRight = NULL;
+    
+    texturePNGRandomMiddle = NULL;
+    
+    texturePNGRandomLeft = NULL;
     
     //
     
@@ -178,6 +194,8 @@ void closeProgram()
 vector<string>vectorImagesRight = {"apple.png","banana.png","bar.png","cherry.png","grape.png","lemon.png","orange.png","watermelon.png","apple.png","banana.png","bar.png","cherry.png","grape.png","lemon.png","orange.png","watermelon.png","apple.png","banana.png","bar.png","cherry.png","grape.png","lemon.png","orange.png","watermelon.png"};
 
 vector<string>vectorImagesMiddle = {"apple.png","banana.png","bar.png","cherry.png","grape.png","lemon.png","orange.png","watermelon.png","apple.png","banana.png","bar.png","cherry.png","grape.png","lemon.png","orange.png","watermelon.png"};
+
+vector<string>vectorImagesLeft = {"apple.png","banana.png","bar.png","cherry.png","grape.png","lemon.png","orange.png","watermelon.png"};
 
 
 int main(int argc, const char * argv[]) {
@@ -261,7 +279,7 @@ int main(int argc, const char * argv[]) {
             
             SDL_GetMouseState(&x, &y);
             
-            cout << "x-> " << x << " y-> " << y << endl;
+            //cout << "x-> " << x << " y-> " << y << endl;
             
             SDL_RenderClear(rendererPtr);
             
@@ -305,15 +323,21 @@ int main(int argc, const char * argv[]) {
                 
                 SDL_RenderPresent(rendererPtr);
                 
-                for(int i = 0; i < vectorImagesRight.size(); i++)
+                for(int i = 0; i < 8; i++)
                 {
-                    texturePNGRandom = IMG_LoadTexture(rendererPtr, vectorImagesRight[i].c_str());
+                    texturePNGRandomRight = IMG_LoadTexture(rendererPtr, vectorImagesRight[i].c_str());
                     
-                    SDL_RenderCopy(rendererPtr, texturePNGRandom, NULL, &rectCardRight);
+                    texturePNGRandomMiddle = IMG_LoadTexture(rendererPtr, vectorImagesMiddle[i].c_str());
                     
-                    SDL_RenderCopy(rendererPtr, texturePNGRandom, NULL, &rectCardMiddle);
+                    texturePNGRandomLeft = IMG_LoadTexture(rendererPtr, vectorImagesLeft[i].c_str());
                     
-                    SDL_RenderCopy(rendererPtr, texturePNGRandom, NULL, &rectCardLeft);
+                    textureCardLeft = IMG_LoadTexture(rendererPtr, vectorImagesLeft[numRandomLeft].c_str());
+                    
+                    SDL_RenderCopy(rendererPtr, texturePNGRandomRight, NULL, &rectCardRight);
+                    
+                    SDL_RenderCopy(rendererPtr, texturePNGRandomMiddle, NULL, &rectCardMiddle);
+                    
+                    SDL_RenderCopy(rendererPtr, texturePNGRandomLeft, NULL, &rectCardLeft);
                     
                     SDL_RenderPresent(rendererPtr);
                     
@@ -322,34 +346,86 @@ int main(int argc, const char * argv[]) {
                     
                 }
                 
-//                SDL_RenderCopy(rendererPtr, textureCardLeft, NULL, &rectCardLeft);
-//                
-//                //SDL_RenderPresent(rendererPtr);
-//                
-//                for(int i = 0; i < 14; i++)
-//                {
-//                    texturePNGRandom = IMG_LoadTexture(rendererPtr, vectorImagesRight[i].c_str());
-//                    
-//                    SDL_RenderCopy(rendererPtr, texturePNGRandom, NULL, &rectCardRight);
-//                    
-//                    SDL_RenderCopy(rendererPtr, texturePNGRandom, NULL, &rectCardMiddle);
-//                    
-//                    SDL_RenderPresent(rendererPtr);
-//                    
-//                    SDL_Delay(100);
-//                }
+                textureCardLeft = IMG_LoadTexture(rendererPtr, vectorImagesLeft[numRandomLeft].c_str());
+                
+                SDL_RenderCopy(rendererPtr, textureCardLeft, NULL, &rectCardLeft);
+                
+                SDL_RenderPresent(rendererPtr);
+                
+                for(int i = 0; i < 16; i++)
+                {
+                    texturePNGRandomRight = IMG_LoadTexture(rendererPtr, vectorImagesRight[i].c_str());
+                    
+                    texturePNGRandomMiddle = IMG_LoadTexture(rendererPtr, vectorImagesMiddle[i].c_str());
+                    
+                    textureCardLeft = IMG_LoadTexture(rendererPtr, vectorImagesLeft[numRandomLeft].c_str());
+                    
+                    SDL_RenderCopy(rendererPtr, texturePNGRandomRight, NULL, &rectCardRight);
+                    
+                    SDL_RenderCopy(rendererPtr, texturePNGRandomMiddle, NULL, &rectCardMiddle);
+                    
+                    SDL_RenderCopy(rendererPtr, textureCardLeft, NULL, &rectCardLeft);
+                    
+                    SDL_RenderPresent(rendererPtr);
+                    
+                    SDL_Delay(100);
+                }
+                
+                textureCardMiddle = IMG_LoadTexture(rendererPtr, vectorImagesMiddle[numRandomMiddle].c_str());
+                
+                SDL_RenderCopy(rendererPtr, textureCardMiddle, NULL, &rectCardMiddle);
+                
+                SDL_RenderPresent(rendererPtr);
+                
+                for(int i = 0; i < 21; i++)
+                {
+                    texturePNGRandomRight = IMG_LoadTexture(rendererPtr, vectorImagesRight[i].c_str());
+                    
+                    textureCardMiddle = IMG_LoadTexture(rendererPtr, vectorImagesMiddle[numRandomMiddle].c_str());
+                    
+                    SDL_RenderCopy(rendererPtr, textureCardMiddle, NULL, &rectCardMiddle);
+                    
+                    SDL_RenderCopy(rendererPtr, texturePNGRandomRight, NULL, &rectCardRight);
+                    
+                    SDL_RenderPresent(rendererPtr);
+                    
+                    SDL_Delay(100);
+                }
                 
                 textureCardRight = IMG_LoadTexture(rendererPtr, vectorImagesRight[numRandom].c_str());
                 
                 SDL_RenderCopy(rendererPtr, textureCardRight, NULL, &rectCardRight);
                 
-                textureCardMiddle = IMG_LoadTexture(rendererPtr, vectorImagesRight[numRandomMiddle].c_str());
+                SDL_RenderPresent(rendererPtr);
                 
-                SDL_RenderCopy(rendererPtr,textureCardMiddle,NULL,&rectCardMiddle);
+                if(numRandomLeft == numRandomMiddle && numRandomLeft == numRandom)
+                {
+                    SDL_Delay(500);
+                    
+                    for(int i = 1; i <= 3; i++)
+                    {
+                        
+                        textureBackground = IMG_LoadTexture(rendererPtr, "moneyBackground.png");
+                        
+                        SDL_RenderCopy(rendererPtr, textureBackground, NULL, NULL);
+                        
+                        SDL_RenderPresent(rendererPtr);
+                        
+                        SDL_Delay(1000);
+                        
+                        textureBackground = IMG_LoadTexture(rendererPtr, "wallpaper.png");
+                        
+                        SDL_RenderCopy(rendererPtr, textureBackground, NULL, NULL);
+                        
+                        SDL_RenderPresent(rendererPtr);
+                        
+                        SDL_Delay(1000);
+                        
+                    }
+                }
                 
-                textureCardLeft = IMG_LoadTexture(rendererPtr, vectorImagesRight[numRandomLeft].c_str());
+                cout << numRandom << " " << numRandomMiddle << " " << numRandomLeft << endl;
                 
-                SDL_RenderCopy(rendererPtr, textureCardLeft, NULL, &rectCardLeft);
             }
             
             SDL_RenderPresent(rendererPtr);
